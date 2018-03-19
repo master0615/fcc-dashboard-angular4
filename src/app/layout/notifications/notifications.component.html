@@ -1,0 +1,18 @@
+<div class="notifications">
+    <ngx-loading [show]="loading"></ngx-loading>  
+    <ngx-datatable
+        class="material"
+        [rows]="notifications"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [externalPaging]="true"
+        [count]="totalElements"
+        [offset]="pageNumber"
+        [limit]="pageSize"
+        (page)='setPage($event)'>
+    </ngx-datatable>
+
+</div>
